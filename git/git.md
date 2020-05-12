@@ -17,3 +17,9 @@ git pull origin master --allow-unrelated-histories
 
 #上传
 git push -u -f origin master
+
+#删除文件夹上传
+
+git rm -r --cached .idea            
+git commit -m '删除.idea' 
+git push -u -f origin master      
