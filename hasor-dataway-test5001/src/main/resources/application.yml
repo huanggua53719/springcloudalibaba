@@ -1,0 +1,40 @@
+server:
+  port: 5001
+
+spring:
+  application:
+    name: hasor-dataway-test
+  datasource:
+    # druid
+    druid:
+      type: com.alibaba.druid.pool.DruidDataSource  #当前数据源操作类型
+      driver-class-name: org.gjt.mm.mysql.Driver  # mysql驱动包
+      url: jdbc:mysql://192.168.0.115:3307/test?userUnicode=true&characterEncoding=utf-8&useSSL=false
+      username: root
+      password: root
+      initial-size: 3
+      min-idle: 3
+      max-active: 10
+      max-wait: 60000
+      stat-view-servlet:
+        login-username: admin
+        login-password: admin
+      filter:
+        stat:
+          log-slow-sql: true
+          slow-sql-millis: 10000
+
+# 是否启用 Dataway 功能（必选：默认false）
+HASOR_DATAQL_DATAWAY: true
+
+# 是否开启 Dataway 后台管理界面（必选：默认false）
+HASOR_DATAQL_DATAWAY_ADMIN: true
+
+# dataway  API工作路径（可选，默认：/api/）
+HASOR_DATAQL_DATAWAY_API_URL: /api/
+
+# dataway-ui 的工作路径（可选，默认：/interface-ui/）
+HASOR_DATAQL_DATAWAY_UI_URL: /interface-ui/
+
+# SQL执行器方言设置（可选，建议设置）
+HASOR_DATAQL_FX_PAGE_DIALECT: mysql
