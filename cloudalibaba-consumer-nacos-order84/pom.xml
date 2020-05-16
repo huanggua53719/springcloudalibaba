@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloudalibaba-sentinel-service8401</artifactId>
+    <artifactId>cloudalibaba-consumer-nacos-order84</artifactId>
 
     <dependencies>
         <!--SpringCloud alibaba nacos-->
@@ -27,11 +27,12 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
         </dependency>
-        <!--openfeign-->
+        <!--SpringCloud openfeign-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
+        <!--自定义通用包-->
         <dependency>
             <groupId>org.example.springcloud</groupId>
             <artifactId>cloud-api-commons</artifactId>
@@ -64,5 +65,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
 
 </project>
